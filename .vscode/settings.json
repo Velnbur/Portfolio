@@ -39,6 +39,8 @@
         "tempor",
         "ut",
         "vero",
-        "voluptua"
-    ]
+        "voluptua",
+        "arwn"
+    ],
+    "python.pythonPath": "env/bin/python"
 }
