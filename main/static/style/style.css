@@ -71,6 +71,45 @@ header #menu {
     height: 50px;
 }
 
+button#button-sidebar {
+    background-color: black;
+    border: 0px;
+}
+
+div#sidebar {
+    margin-top: 70px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    display: none;
+    border-bottom-left-radius: 20px;
+    padding: 30px;
+    text-align: center;
+}
+
+div#sidebar ul {
+    list-style: none;
+}
+
+div#sidebar a {
+    font-family: "Nunito", serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+}
+
+div#sidebar a:hover {
+    background-color: white;
+    color: black;
+    border-radius: 20px;
+}
+
 #back-img {
     width: 100%;
     height: 1000px;
@@ -84,10 +123,7 @@ header #menu {
     font-weight: bolder;
     font-family: Georgia, "Times New Roman", Times, serif;
     text-transform: uppercase;
-    padding-top: 330px;
-    padding-right: 500px;
-    padding-left: 100px;
-    padding-bottom: 600px;
+    padding: 330px 500px 600px 100px;
     position: relative;
     animation-name: big-title-anim;
     animation-duration: 3s;
@@ -135,7 +171,7 @@ header #menu {
 }
 
 .we-can h1 {
-    font-family: "Nunito";
+    font-family: "Nunito", serif;
     font-size: 60px;
     font-weight: bolder;
     color: white;
@@ -152,16 +188,17 @@ header #menu {
 }
 
 .we-can img {
-    display: block;
     margin-left: auto;
     margin-right: auto;
     width: 300px;
     height: 300px;
+    display: none;
 }
 
 .we-can .column:hover {
     transform: scale(1.05);
     background-color: white;
+    display: block;
 }
 
 .we-can .column#bot:hover {
@@ -181,7 +218,7 @@ header #menu {
 }
 
 .small-container h2 {
-    font-family: "Nunito";
+    font-family: "Nunito", serif;
     font-weight: bolder;
 }
 
@@ -193,7 +230,7 @@ header #menu {
 .describing {
     width: 70%;
     padding: 20px;
-    font-family: "Nunito";
+    font-family: "Nunito", serif;
     animation-name: about-us-anim;
     animation-duration: 2s;
 }
@@ -225,22 +262,21 @@ header #menu {
 }
 
 .news-row {
-    font-family: "Nunito";
+    font-family: "Nunito", serif;
     padding: 10px;
-    width: 21%;
+    width: 25%;
 }
 
-.news-row > .news-article {
+.news-row > .article {
     background-color: black;
     border-radius: 20px;
     color: white;
-    margin: 10px;
-    margin-bottom: 20px;
+    margin: 10px 10px 20px;
     padding: 20px;
     transition: 200ms linear;
 }
 
-.news-article:hover {
+.news-row > .article:hover {
     transform: scale(1.05);
 }
 
@@ -259,14 +295,15 @@ header #menu {
     display: flex;
     align-items: center;
 }
-.article-author a {
+
+.news-row .article-author a {
     text-decoration: none;
     font-weight: bold;
+    border-radius: 5px;
     color: white;
 }
 
-.article-author a:hover {
-    border-radius: 5px;
+.news-row .article-author a:hover {
     background-color: white;
     color: black;
 }
@@ -276,13 +313,10 @@ footer {
     display: flex;
     margin: 0;
     bottom: 0;
-    padding-top: 200px;
-    padding-bottom: 50px;
-    padding-left: 200px;
-    padding-right: 200px;
+    padding: 200px 200px 50px;
     background-color: black;
     background-image: url(../img/footer.png);
-    font-family: "Nunito";
+    font-family: "Nunito", serif;
 }
 
 footer ul {
@@ -305,15 +339,15 @@ footer h2 {
 }
 
 form#footer {
-    padding-top: 50px;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-top: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
     font-weight: bold;
     font-size: 20px;
 }
 
 form#footer input {
-    border: 0px solid white;
+    border: 0 solid white;
     background-color: black;
     color: white;
     border-radius: 30px;

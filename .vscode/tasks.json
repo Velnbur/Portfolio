@@ -6,7 +6,8 @@
         {
             "label": "migrate",
             "type": "shell",
-            "command": "python ${workspaceFolder}/main/manage.py migrate"
+            "command": "python ${workspaceFolder}/main/manage.py migrate",
+            "problemMatcher": []
         },
         {
             "label": "makemigrations",

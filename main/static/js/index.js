@@ -1,9 +1,19 @@
-function hover(element) {
-    element.setAttribute("src", "static/img/menu-icon-hover.png");
+function hoverIn(element) {
+    element.setAttribute("src", "/static/img/menu-icon-hover.png");
     element.setAttribute("style", "background-color: white;");
 }
 
-function unhover(element) {
-    element.setAttribute("src", "static/img/menu-icon.png");
+function hoverOut(element) {
+    element.setAttribute("src", "/static/img/menu-icon.png");
     element.setAttribute("style", "background-color: transparent;");
+}
+
+function sidebarOpen() {
+    document.getElementById("sidebar").style.display = "block";
+    document.getElementById("button-sidebar").onclick = sidebarClose;
+}
+
+function sidebarClose() {
+    document.getElementById("sidebar").style.display = "none";
+    document.getElementById("button-sidebar").onclick = sidebarOpen;
 }
