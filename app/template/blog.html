@@ -1,0 +1,85 @@
+<link rel="stylesheet" href="../static/style/blog.css">
+{% extends "index.html" %}
+{% load static %}
+{% block title %} Blog Page {% endblock %}
+{% block content %}
+<div class="blog">
+<div class="search-form">
+  <form>
+  <input type="text" placeholder="Enter keywords">
+  <button type="submit">
+    <img width="20px" height="20px" src="{% static 'img/search-icon.png' %}">
+  </button>
+  </form>
+</div>
+  <div id="blog-main">
+    <div class="filter-bar">
+      <h2>Filter articles</h2>
+    </div>
+    <div class="articles-column">
+      <div class="article">
+        <img src="{% static 'img/article.png' %}" alt="article image"/>
+        <div class="article-info">
+          <div class="article-title"><a href="{% url 'article' 'article.id'%}">Article Title</div>
+          <div class="article-text">
+            Magna sadipscing ut ipsum et lorem ut voluptua, eirmod magna tempor
+            sea rebum sit sit. Aliquyam magna sadipscing amet amet rebum voluptua,
+            sea consetetur elitr ut diam at dolores. Dolores elitr erat elitr ut
+            stet, eos sanctus at sed takimata...
+          </div>
+          <div class="article-author">
+            <img width="30px" height="30px" src="{% static  'img/profile-icon.png' %}" alt="profile icon"/>
+            <a href="{% url 'profile' 'Kirill' %}">Kirill</a>
+          </div>
+          <div class="article-date">29.03.2020</div>
+        </div>
+      </div>
+    </div>
+    <div class="news-row">
+      <h1 style="text-align: center">Last articles</h1>
+      <div class="article">
+        <div class="article-title">Article Title</div>
+        <div class="article-text">
+          Magna sadipscing ut ipsum et lorem ut voluptua, eirmod magna
+          tempor sea rebum sit sit. Aliquyam magna sadipscing amet amet
+          rebum voluptua, sea consetetur elitr ut diam at dolores. Dolores
+          elitr erat elitr ut stet, eos sanctus at sed takimata.
+        </div>
+        <div class="article-author">
+          <img alt="profile icon" width="30px" height="30px" src="{% static  'img/profile-icon.png' %}"/>
+          <a href="{% url 'profile' 'Kirill' %}">Kirill</a>
+        </div>
+        <div class="article-date">29.03.2020</div>
+      </div>
+      <div class="article">
+        <div class="article-title">Article Title</div>
+        <div class="article-text">
+          Magna sadipscing ut ipsum et lorem ut voluptua, eirmod magna
+          tempor sea rebum sit sit. Aliquyam magna sadipscing amet amet
+          rebum voluptua, sea consetetur elitr ut diam at dolores. Dolores
+          elitr erat elitr ut stet, eos sanctus at sed takimata.
+        </div>
+        <div class="article-author">
+          <img width="30px" height="30px" src="{% static  'img/profile-icon.png' %}" alt="profile app icon"/>
+          <a href="{% url 'profile' %}">Kirill</a>
+        </div>
+        <div class="article-date">29.03.2020</div>
+      </div>
+      <div class="article">
+        <div class="article-title">Article Title</div>
+        <div class="article-text">
+          Magna sadipscing ut ipsum et lorem ut voluptua, eirmod magna
+          tempor sea rebum sit sit. Aliquyam magna sadipscing amet amet
+          rebum voluptua, sea consetetur elitr ut diam at dolores. Dolores
+          elitr erat elitr ut stet, eos sanctus at sed takimata.
+        </div>
+        <div class="article-author">
+          <img alt="profile icon" width="30px" height="30px" src="{% static 'img/profile-icon.png' %}"/>
+          <a href="{% url 'profile' %}">Kirill</a>
+        </div>
+        <div class="article-date">29.03.2020</div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

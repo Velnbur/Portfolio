@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>{% block title %}Main Page {% endblock %}</title>
+  <link rel="icon" href="{% static 'img/icon.png' %}"/>
+  <link rel="stylesheet" href="{% static 'style/style.css' %}"/>
+  <link rel="stylesheet" href="{% static 'style/blog.css' %}"/>
+  <script src="{% static 'js/index.js' %}"></script>
+</head>
+
+<body>
+<header>
+  <div id="icon">
+    <a class="icon" href="{% url 'home' %}">
+      <img width="80px" height="45px" src="{% static 'img/company-icon.png' %}" alt="site icon"/>
+    </a>
+  </div>
+  <ul>
+    <li id="nav"><a href="{% url 'portfolio' %}">Portfolio</a></li>
+    <li id="nav"><a href="{% url 'blog' %}">Blog</a></li>
+    <li id="nav"><a href="{% url 'contact_us' %}">Contact Us</a></li>
+  </ul>
+  <div id="icon">
+    <button id="button-sidebar" onclick="sidebarOpen()">
+      <img alt="side button" id="menu" onmouseover="hoverIn(this)" onmouseout="hoverOut(this)" src="{% static 'img/menu-icon.png' %}"/>
+    </button>
+  </div>
+</header>
+<div id="sidebar">
+  <p><a href="{% url 'profile' 'Kirill' %}">Profile</a></p>
+  <p><a href="{% url 'log_out' %}">Log out</a></p>
+</div>
+{% block content %}
+  <div class="main-page">
+    <div class="big-title">unleash your potential</div>
+    <div class="we-can">
+      <h1>We can develop:</h1>
+      <div id="row">
+        <div id="mobile" class="column">
+          <h2>Mobile apps</h2>
+          <img src="{% static 'img/mobile-icon.png' %}" alt="mobile app icon"/>
+        </div>
+        <div id="website" class="column">
+          <h2>Websites</h2>
+          <img src="{% static 'img/website-icon.png' %}" alt="website app icon"/>
+        </div>
+        <div id="bot" class="column">
+          <h2>Telegram bots</h2>
+          <img src="{% static 'img/bot-icon.png' %}" alt="bot app icon"/>
+        </div>
+        <div id="fullstack" class="column">
+          <h2>Full stack web apps</h2>
+          <img src="{% static 'img/fullstack-app-icon.png' %}" alt="fullstack app icon"/>
+        </div>
+        <div id="help" class="column">
+          <h2>Help with...</h2>
+          <img src="{% static 'img/question-icon.png' %}" alt="question mark icon"/>
+        </div>
+      </div>
+    </div>
+    <div class="base-container">
+      <div class="describing">
+        <h1>About US</h1>
+        <div id="row">
+          <p>
+            Duo clita ipsum stet nonumy vero clita kasd kasd. Dolore ipsum et
+            sadipscing elitr tempor justo, amet at eos at elitr tempor
+            voluptua. Magna eos diam rebum kasd ea ea lorem. Et lorem eirmod
+            sed ipsum. Dolor et elitr et sit duo. Et magna dolore est et, erat
+            eos stet et eos voluptua ut. Dolor stet sea ea aliquyam rebum. Et
+            ipsum elitr elitr accusam et. Stet takimata vero sadipscing sit
+            diam dolor nonumy sanctus ipsum. Sed duo no amet elitr sed rebum
+            clita amet, sadipscing ut eos ipsum sea consetetur ipsum. Aliquyam
+            et clita dolor eos lorem clita eos, clita ipsum sea stet tempor
+            ipsum invidunt, invidunt et ut duo et lorem sit justo. Et stet
+            ipsum ipsum et dolor dolor, vero et elitr lorem nonumy eirmod sit,
+            labore sadipscing lorem et diam sit at voluptua, no amet dolore
+            sadipscing dolores sed et sanctus kasd.Takimata eirmod lorem amet
+            sit lorem justo ipsum dolor erat, kasd sadipscing elitr at
+            takimata labore consetetur eirmod lorem no, lorem tempor eirmod
+            ipsum elitr dolor et takimata, ea sed sit sit vero gubergren sit
+            lorem. Eirmod vero dolor nonumy ipsum labore. Et sanctus dolore
+            ipsum et sed diam nonumy ipsum, dolores sit nonumy tempor
+            takimata. Aliquyam no nonumy eirmod et lorem. Sea dolore amet eos
+            nonumy takimata, diam ut rebum accusam clita aliquyam dolor sed,
+            aliquyam et magna sanctus ipsum et sea. Erat sit erat accusam
+            dolores voluptua sit amet sit, stet diam accusam elitr et voluptua
+            aliquyam dolores consetetur sit, eirmod amet duo takimata amet,
+            sadipscing ipsum ea sanctus kasd ipsum. Consetetur dolore
+            gubergren tempor vero consetetur nonumy dolores, lorem invidunt
+            sadipscing et clita diam sed gubergren duo et. Sadipscing sit
+            nonumy et est at sed sed et, accusam invidunt no diam rebum, et et
+            et duo gubergren dolores voluptua et at. Rebum amet clita tempor
+            amet est amet elitr et. Sanctus sit at lorem at et, dolor lorem
+            invidunt et invidunt invidunt magna accusam invidunt stet. Dolor
+            sed nonumy clita et, eos stet accusam sanctus est et sea. Magna
+            dolore ea labore lorem duo. At elitr ea.
+          </p>
+        </div>
+      </div>
+      <div class="news-row">
+        <h1 style="text-align: center">Last articles</h1>
+        <div class="article">
+          <div class="article-title">Article Title</div>
+          <div class="article-text">
+            Magna sadipscing ut ipsum et lorem ut voluptua, eirmod magna
+            tempor sea rebum sit sit. Aliquyam magna sadipscing amet amet
+            rebum voluptua, sea consetetur elitr ut diam at dolores. Dolores
+            elitr erat elitr ut stet, eos sanctus at sed takimata.
+          </div>
+          <div class="article-author">
+            <img alt="profile icon" width="30px" height="30px" src="{% static  'img/profile-icon.png' %}"/>
+            <a href="{% url 'profile' 'Kirill' %}">Kirill</a>
+          </div>
+          <div class="article-date">29.03.2020</div>
+        </div>
+        <div class="article">
+          <div class="article-title">Article Title</div>
+          <div class="article-text">
+            Magna sadipscing ut ipsum et lorem ut voluptua, eirmod magna
+            tempor sea rebum sit sit. Aliquyam magna sadipscing amet amet
+            rebum voluptua, sea consetetur elitr ut diam at dolores. Dolores
+            elitr erat elitr ut stet, eos sanctus at sed takimata.
+          </div>
+          <div class="article-author">
+            <img width="30px" height="30px" src="{% static  'img/profile-icon.png' %}" alt="profile app icon"/>
+            <a href="{% url 'profile' 'Kirill' %}">Kirill</a>
+          </div>
+          <div class="article-date">29.03.2020</div>
+        </div>
+        <div class="article">
+          <div class="article-title">Article Title</div>
+          <div class="article-text">
+            Magna sadipscing ut ipsum et lorem ut voluptua, eirmod magna
+            tempor sea rebum sit sit. Aliquyam magna sadipscing amet amet
+            rebum voluptua, sea consetetur elitr ut diam at dolores. Dolores
+            elitr erat elitr ut stet, eos sanctus at sed takimata.
+          </div>
+          <div class="article-author">
+            <img alt="profile icon" width="30px" height="30px" src="{% static 'img/profile-icon.png' %}"/>
+            <a href="{% url 'profile' 'Kirill' %}">Kirill</a>
+          </div>
+          <div class="article-date">29.03.2020</div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endblock %}
+<footer>
+  <div id="footer">
+    <h2>Our contacts</h2>
+    <p>
+      <img width="30px" height="30px" src="{% static  'img/phone-icon.png' %}" alt="phone icon"/>
+      +3800000000
+    </p>
+    <p>
+      <img width="30px" height="30px" src="{% static  'img/geo-icon.png' %}" alt="geo tag icon"/>
+      Kiev
+    </p>
+    <p>
+      <img width="30px" height="30px" src="{% static  'img/mail-icon.png' %}" alt="mail icon"/>
+      test@gmail.com
+    </p>
+  </div>
+  <div id="footer">
+    <h2>We can develop:</h2>
+    <ul>
+      <li>Mobile apps</li>
+      <li>Static Websites</li>
+      <li>Fullstack apps</li>
+      <li>Website designs</li>
+    </ul>
+  </div>
+  <form id="footer">
+    <label for="email-form">
+      If you want to subscribe to our blog, fill the form below!
+    </label>
+    <p><input type="text" id="email-form" name="email"/></p>
+  </form>
+  <div id="footer">
+    <h2>Our social media</h2>
+    <p>
+      <img width="30px" height="30px" src="{% static  'img/instagram.png' %}" alt="instagram icon"/>
+      CompanyName
+    </p>
+    <p>
+      <img width="30px" height="30px" src="{% static  'img/facebook.png' %}" alt="facebook icon"/>
+      CompanyName
+    </p>
+    <p>
+      <img width="30px" height="30px" src="{% static  'img/telegram.png' %}" alt="telegram icon"/>
+      @Velnbur
+    </p>
+  </div>
+</footer>
+</body>
+</html>
