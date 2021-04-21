@@ -1,0 +1,23 @@
+{% extends "index.html" %}
+{% load static %}
+
+{% block title %} {{article.heading}} {% endblock %}
+
+{% block content %}
+  <div class="article-page">
+    <div class="article">
+      <img class="article-image" src="{{article.image.url}}">
+      <h2>{{article.heading}}</h2>
+      <div class="article-author">
+        <img width="30px" height="30px" src="{% static  'img/profile-icon.png' %}" alt="profile icon"/>
+        <a href="{% url 'profile' article.author %}">{{article.author}}</a>
+      </div>
+      <div class="article-date">{{article.date}}</div>
+      <div class="article-text">
+        {{article.text | safe}}
+        <br>
+        Views: {{article.views}}
+      </div>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,28 @@
+.article-page {
+    margin-top: 100px;
+    margin-left: 30%;
+    margin-right: 20%;
+    font-family: "Nunito", serif;
+}
+
+.article-page > .article {
+    padding: 30px;
+    background-color: white;
+    border-radius: 20px;
+}
+.article-image {
+    border-radius: 10px;
+    width: 100%;
+}
+
+.article-page .article-author a {
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    color: black;
+}
+
+.article-page .article-author a:hover {
+    background-color: black;
+    color: white;
+}

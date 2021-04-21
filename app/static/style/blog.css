@@ -1,9 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,300;0,700;1,300&display=swap");
 
-.blog {
-    padding-top: 100px;
+.canvas {
+    margin-top: 100px;
+    margin-bottom: 50px;
+    padding: 50px;
     background-color: white;
-    width: 100%;
 }
 
 .search-form {
@@ -56,24 +57,29 @@
 }
 
 .articles-column {
+    width: 60%;
     padding-left: 10px;
     padding-right: 10px;
     margin: 10px;
 }
 
 .articles-column > .article {
-    display: flex;
+    display: grid;
     border-radius: 20px;
-    margin: 10px;
-    padding: 20px 10px 20px 10px;
+    margin: 10px 10px 50px 10px;
+    padding: 30px;
     background-color: black;
     color: white;
 }
 
+.articles-column > .article:hover {
+    transform: scale(1.02);
+    transition: 300ms linear;
+}
+
 .articles-column > .article > img {
-    height: 150px;
+    width: 100%;
     border-radius: 10px;
-    margin: 5px;
 }
 
 .articles-column .article-info {
@@ -86,9 +92,20 @@
     font-size: 35px;
 }
 
-.articles-column .article-author a {
+.articles-column a {
     text-decoration: none;
     color: white;
     font-family: "Nunito", serif;
     font-weight: bolder;
+    border-radius: 5px;
+}
+
+.article-title a {
+    color: white;
+    text-decoration: none;
+}
+
+.articles-column .article-author a:hover {
+    color: black;
+    background: white;
 }

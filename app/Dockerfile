@@ -12,7 +12,10 @@ WORKDIR /usr/src/app
 
 # pcyotg deps
 RUN apk update \
-    && apk add postgresql-dev gcc python3-dev musl-dev
+    && apk add postgresql-dev gcc python3-dev musl-dev zlib-dev jpeg-dev
+
+# To install Pillow
+ENV LIBRARY_PATH=/lib:/usr/lib
 
 # Install depedencies
 RUN pip install --upgrade pip
