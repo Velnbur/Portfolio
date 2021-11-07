@@ -1,4 +1,3 @@
-""" import django render function for basic rendering """
 from django.shortcuts import render, HttpResponse
 
 
