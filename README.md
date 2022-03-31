@@ -16,4 +16,6 @@ like **CSS** (still hate it), **HTML** and **JS**
 This project uses docker images and compose for building it, so
 you may simply change change `.env` file and environmental variables in
 `Dockerfile` (must be fixed in near future). And finally run:
-> docker-compose up -d --build
+```
+$ docker-compose up -d --build
+```
